@@ -8,13 +8,13 @@ upDown.attach(5)
 
 for angle in range(90, int(sys.argv[1])):
     leftRight.write(angle)
-    time.sleep(0.01)
+    time.sleep(0.005)
 
 time.sleep(0.5)
 
 for angle in range(90, int(sys.argv[2])):
     upDown.write(angle)
-    time.sleep(0.01)
+    time.sleep(0.005)
 
 time.sleep(0.5)
 
