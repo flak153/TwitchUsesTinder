@@ -33,10 +33,12 @@ myServo.attach(3)
 @app.route('/left')
 def left():
             # From 0 to 180 degrees
-        for angle in range(90, 180):
+        for angle in range(90, 179):
             myServo.write(angle)
             time.sleep(0.005)
-
+        for angle in range(90, 179):
+                myServo.write(90)
+                time.sleep(0.005)
         return "Done"
 
 @app.route('/right')
