@@ -46,4 +46,5 @@ def right():
             time.sleep(0.005)
         return "Done"
 
-
+if __name__ == "__main__":
+    app.run()
