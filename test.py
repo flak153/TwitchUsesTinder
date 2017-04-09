@@ -6,7 +6,9 @@ upDown = Servo("Second Servo")
 leftRight.attach(3)
 upDown.attach(5)
 
-leftRight.write(90)
-time.sleep(0.01)
-upDown.write(90)
-time.sleep(0.01)
+for angle in range(0, 180):
+    leftRight.write(angle)
+    time.sleep(0.005)
+for angle in range(180, 0, -1):
+    leftRight.write(angle)
+    time.sleep(0.005)
