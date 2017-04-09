@@ -10,6 +10,11 @@ for angle in range(0, int(sys.argv[1])):
     leftRight.write(angle)
     time.sleep(0.005)
 
+time.sleep(1)
+
 for angle in range(0, int(sys.argv[2])):
     upDown.write(angle)
     time.sleep(0.005)
+
+leftRight.write(0)
+upDown.write(0)
