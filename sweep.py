@@ -18,6 +18,8 @@ Diego Villalobos	02-12-2015	Example created
 # Libraries required
 from Servo import *
 import time
+from flask import Flask
+app = Flask(__name__)
 
 # Create a new servo object with a reference name
 myServo = Servo("First Servo")
@@ -27,18 +29,21 @@ myServo.attach(3)
 
 # Print servo settings
 
-try:
-    # Sweeps the servo motor forever
-    while True:
-        # From 0 to 180 degrees
+
+@app.route('/left')
+def hello_world():
+            # From 0 to 180 degrees
         for angle in range(0, 180):
             myServo.write(angle)
             time.sleep(0.005)
 
-        # From 180 to 0 degrees
+        return "Done"
+
+@app.route('/right')
+def hello_world():
         for angle in range(180, -1, -1):
             myServo.write(angle)
             time.sleep(0.005)
+        return "Done"
 
-except KeyboardInterrupt:
-    print "Sweep ended."
+
