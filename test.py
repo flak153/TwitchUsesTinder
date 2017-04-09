@@ -9,13 +9,13 @@ upDown.attach(5)
 for angle in range(90, 135):
     leftRight.write(angle)
     time.sleep(0.005)
-for angle in range(90, 80, -1):
+for angle in range(90, 60, -1):
     upDown.write(angle)
     time.sleep(0.005)
 
 for angle in range(135, 90, -1):
     leftRight.write(angle)
     time.sleep(0.005)
-for angle in range(80, 90, 1):
+for angle in range(60, 90, 1):
     upDown.write(angle)
     time.sleep(0.005)
