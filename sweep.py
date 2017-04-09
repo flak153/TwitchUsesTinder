@@ -53,7 +53,7 @@ def left():
 
 @app.route('/right')
 def right():
-    for angle in range(90, 110):
+    for angle in range(90, 70, -1):
         leftRight.write(angle)
         time.sleep(0.005)
     for angle in range(70, 120):
@@ -63,7 +63,7 @@ def right():
     for angle in range(120, 70, -1):
         upDown.write(angle)
         time.sleep(0.005)
-    for angle in range(110, 90, -1):
+    for angle in range(70, 90):
         leftRight.write(angle)
         time.sleep(0.005)
     return "Done"
