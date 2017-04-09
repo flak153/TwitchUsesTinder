@@ -240,6 +240,4 @@ class Servo:
         # Sets period and then frequency
         self._period = period
         self._pwm.period(self._period)
-
-
-self._frequency = round(1 / period, 4)
+        self._frequency = round(1 / period, 4)
