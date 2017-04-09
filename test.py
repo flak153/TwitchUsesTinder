@@ -6,7 +6,7 @@ upDown = Servo("Second Servo")
 leftRight.attach(3)
 upDown.attach(5)
 
-for angle in range(90, 100):
+for angle in range(90, 110):
     leftRight.write(angle)
     time.sleep(0.005)
 for angle in range(70, 130):
@@ -16,6 +16,6 @@ for angle in range(70, 130):
 for angle in range(130, 70, -1):
     upDown.write(angle)
     time.sleep(0.005)
-for angle in range(100, 90, -1):
+for angle in range(110, 90, -1):
     leftRight.write(angle)
     time.sleep(0.005)
