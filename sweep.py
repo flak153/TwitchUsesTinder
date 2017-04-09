@@ -41,7 +41,7 @@ def left():
 
 @app.route('/right')
 def right():
-        for angle in range(90,0, -1):
+        for angle in range(90, 0, -1):
             myServo.write(angle)
             time.sleep(0.005)
         return "Done"
