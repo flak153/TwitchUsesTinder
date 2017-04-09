@@ -12,3 +12,10 @@ for angle in range(0, 180):
 for angle in range(180, 0, -1):
     leftRight.write(angle)
     time.sleep(0.005)
+
+for angle in range(0, 180):
+    upDown.write(angle)
+    time.sleep(0.005)
+for angle in range(180, 0, -1):
+    upDown.write(angle)
+    time.sleep(0.005)
