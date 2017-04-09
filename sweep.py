@@ -31,17 +31,17 @@ myServo.attach(3)
 
 
 @app.route('/left')
-def hello_world():
+def left():
             # From 0 to 180 degrees
-        for angle in range(0, 180):
+        for angle in range(0, 90):
             myServo.write(angle)
             time.sleep(0.005)
 
         return "Done"
 
 @app.route('/right')
-def hello_world():
-        for angle in range(180, -1, -1):
+def right():
+        for angle in range(90, -1, -1):
             myServo.write(angle)
             time.sleep(0.005)
         return "Done"
